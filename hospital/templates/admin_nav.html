@@ -234,8 +234,8 @@
         <a href="" class="nav-link dropdown-toggle text-dark bg-light" id="navbardrop"
 				data-toggle="dropdown" style="color:white; text-decoration:none;"> Patient</a>
 				<div class="dropdown-menu">
-					<a href="{% url 'add_patient' %}" class="dropdown-item">Add Patient</a>
-					<a href="{% url 'view_patient' %}" class="dropdown-item">View Patient</a>
+					<a href="/add_patient" class="dropdown-item">Add Patient</a>
+					<a href="/view_patient" class="dropdown-item">View Patient</a>
 				</div>
       </li>
 
@@ -243,8 +243,8 @@
         <a href="" class="nav-link dropdown-toggle text-dark bg-light" id="navbardrop"
 				data-toggle="dropdown" style="color:white; text-decoration:none;"> Appointment</a>
 				<div class="dropdown-menu">
-					<a href="{% url 'add_appointment' %}" class="dropdown-item">Add Appointment</a>
-					<a href="{% url 'view_appointment' %}" class="dropdown-item">View Appointment</a>
+					<a href="/add_appointment" class="dropdown-item">Add Appointment</a>
+					<a href="#" class="dropdown-item">View Appointment</a>
 				</div>
       </li>
 
@@ -252,8 +252,8 @@
         <a href="" class="nav-link dropdown-toggle text-dark bg-light" id="navbardrop"
 				data-toggle="dropdown" style="color:white; text-decoration:none;"> View Queries</a>
 				<div class="dropdown-menu">
-					<a href="{% url 'unread_queries' %}" class="dropdown-item">Unread Queries</a>
-					<a href="{% url 'read_queries' %}" class="dropdown-item">Read Queries</a>
+					<a href="/unread_queries" class="dropdown-item">Unread Queries</a>
+					<a href="/read_queries" class="dropdown-item">Read Queries</a>
 				</div>
       </li>
     </ul>
@@ -270,7 +270,7 @@
         <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
           <div class="navbar-nav" style=" margin-left: 90%;">
 
-            <a href="{% url 'logout' %}" class="nav-item nav-link"><i class="fas fa-power-off"></i> Logout</a>
+            <a href="/logout" class="nav-item nav-link"><i class="fas fa-power-off"></i> Logout</a>
           </div>
         </div>
       </nav>

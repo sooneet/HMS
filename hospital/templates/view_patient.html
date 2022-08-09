@@ -29,15 +29,17 @@
 			</thead>
 
 			<tbody>
-            {% for i in pat %}
+            {% for patient in patients %}
 			<tr>
-				<td>{{i.id}}</td>
-				<td>{{i.name}}</td>
-				<td>{{i.gender}}</td>
-				<td>{{i.mobile}}</td>
-				<td>{{i.address}}</td>
-				<td><a href="{% url 'edit_patient' i.id %}" class="btn btn-primary">Edit</a> |
-					<a href="{% url 'delete_patient' i.id %}" onclick="return confirm('Are you ready to delete this record ?')" class="btn btn-danger">Delete</a></td>
+				<td>{{patient.id}}</td>
+				<td>{{patient.name}}</td>
+				<td>{{patient.gender}}</td>
+				<td>{{patient.mobile}}</td>
+				<td>{{patient.address}}</td>
+				<td>
+					<a href="{% url 'edit_patient' patient.id %}" class="btn btn-primary">Edit</a> |
+					<a href="{% url 'delete_patient' patient.id %}" onclick="return confirm('Are you ready to delete this record ?')" class="btn btn-danger">Delete</a>
+				</td>
 			</tr>
 			{% endfor %}
 			</tbody>

@@ -40,5 +40,5 @@ class Contact(models.Model):
     is_read = models.CharField(max_length=10,null=True)
 
     def __str__(self):
-        return self.id
+        return self.name
 

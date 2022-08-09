@@ -30,14 +30,14 @@
                                         <th class="d-none d-sm-table-cell" style="width: 15%;">Action</th>
                                     </tr>
                                 </thead>
-                                {% for i in contact %}
+                                {% for unread in unreads %}
                                 <tbody>
                                     <tr>
                                         <td class="text-center">{{forloop.counter}}</td>
-                                        <td class="font-w600">{{i.name}}</td>
-                                        <td class="font-w600">{{i.email}}</td>
-                                        <td class="font-w600">{{i.contact}}</td>
-                                        <td class="font-w600"><a href="{% url 'view_queries' i.id %}" class="text-primary">View Details</a></td>
+                                        <td class="font-w600">{{unread.name}}</td>
+                                        <td class="font-w600">{{unread.email}}</td>
+                                        <td class="font-w600">{{unread.contact}}</td>
+                                        <td class="font-w600"><a href="#" class="text-primary">View Details</a></td>
                                     </tr>
                                         {% endfor %}
                                 </tbody>
