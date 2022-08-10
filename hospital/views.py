@@ -211,6 +211,15 @@ def add_appointment(request):
     }
     return render(request,'add_appointment.html',context)
 
+def delete_appointment(request,id):
+    appointment = Appointment.objects.get(id=id)
+    appointment.delete()
+    return redirect('view_appointment')
+
 def view_appointment(request):
-    return render(request,'view_appointment.html')
+    appointments = Appointment.objects.all()
+    context = {
+        'appointments':appointments
+    }
+    return render(request,'view_appointment.html',context)
 

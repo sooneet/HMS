@@ -22,6 +22,7 @@ urlpatterns = [
     path('edit_patient/<int:id>/', views.edit_patient,name='edit_patient'),
     path('unread_queries/', views.unread_queries,name='unread_queries'),
     path('read_queries/', views.read_queries,name='read_queries'),
-    # path('add_appointment/', views.add_appointment,name='add_appointment'),
-    # path('view_appointment/', views.view_appointment,name='view_appointment'),
+    path('add-appointment/', views.add_appointment,name='add_appointment'),
+    path('view_appointment/', views.view_appointment,name='view_appointment'),
+    path('delete-appointment/<int:id>/', views.delete_appointment,name='delete_appointment'),
 ]

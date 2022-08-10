@@ -28,13 +28,13 @@
 			</thead>
 
 			<tbody>
-            {% for i in appointment %}
+            {% for appointment in appointments %}
 			<tr>
-				<td>{{i.doctor}}</td>
-				<td>{{i.patient}}</td>
-				<td>{{i.date1}}</td>
-				<td>{{i.time1}}</td>
-				<td><a href="{% url 'delete_appointment' i.id %}" onclick="return confirm('Are you ready to delete this record ?')" class="btn btn-danger">Delete</a></td>
+				<td>{{appointment.doctor}}</td>
+				<td>{{appointment.patient}}</td>
+				<td>{{appointment.date1}}</td>
+				<td>{{appointment.time1}}</td>
+				<td><a href="{% url 'delete_appointment' appointment.id %}" onclick="return confirm('Are you ready to delete this record ?')" class="btn btn-danger">Delete</a></td>
 			</tr>
 			{% endfor %}
 			</tbody>
